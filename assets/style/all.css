@@ -404,7 +404,7 @@ h6 {
 
 /*斷點設定*/
 .header {
-  padding: 30px 88px 29.43px 88px;
+  padding: 30px 56px 29.43px 88px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,7 +421,7 @@ h6 {
   @media (max-width: 991px) {
     .header {
       height: auto;
-      padding: 30px 39px; } }
+      padding: 30px 19px 30px 39px; } }
   @media (max-width: 767px) {
     .header {
       -webkit-box-pack: center;
@@ -453,25 +453,20 @@ h6 {
         width: 100%;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; } }
-    .header .menu li {
-      margin-left: 64px; }
-      .header .menu li:nth-child(1) {
-        margin-left: 0; }
-      @media (max-width: 991px) {
-        .header .menu li {
-          margin-left: 40px; } }
-      @media (max-width: 767px) {
-        .header .menu li {
-          width: 50%;
-          margin-left: 0;
-          text-align: center;
-          border: 1px solid #fff; }
-          .header .menu li:hover {
-            background: #fff; } }
+    @media (max-width: 767px) {
+      .header .menu li {
+        width: 50%;
+        margin-left: 0;
+        text-align: center;
+        border: 1px solid #fff; }
+        .header .menu li:hover {
+          background: #fff; } }
     .header .menu a {
       display: block;
       color: #fff;
       font-size: 1.25rem;
+      padding-left: 32px;
+      padding-right: 32px;
       border-bottom: 5px solid transparent; }
       .header .menu a:hover {
         font-weight: 700;
@@ -480,6 +475,10 @@ h6 {
           .header .menu a:hover {
             border-bottom: none;
             color: #aa0601; } }
+      @media (max-width: 991px) {
+        .header .menu a {
+          padding-left: 20px;
+          padding-right: 20px; } }
       @media (max-width: 767px) {
         .header .menu a {
           padding: 8px 0; } }
@@ -493,6 +492,18 @@ h6 {
   @media (max-width: 767px) {
     .footer {
       padding: 24px 0; } }
+  .footer .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-right: 8px; }
+    @media (max-width: 991px) {
+      .footer .container {
+        max-width: 730px; } }
+    @media (max-width: 767px) {
+      .footer .container {
+        max-width: 375px;
+        padding-right: 3px;
+        padding-left: 15px; } }
   .footer .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -501,16 +512,16 @@ h6 {
     @media (max-width: 767px) {
       .footer .menu {
         display: none; } }
-    .footer .menu li {
-      margin-right: 48px; }
-      @media (max-width: 991px) {
-        .footer .menu li {
-          margin-right: 40px; } }
     .footer .menu a {
       color: #fff;
-      border-bottom: 3px solid transparent; }
+      padding-right: 24px;
+      padding-left: 24px; }
       .footer .menu a:hover {
-        border-bottom: 3px solid #fff; }
+        text-decoration: underline; }
+      @media (max-width: 991px) {
+        .footer .menu a {
+          padding-right: 20px;
+          padding-left: 20px; } }
   .footer .contact li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -518,12 +529,15 @@ h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    padding-left: 24px; }
     @media (max-width: 991px) {
       .footer .contact li {
+        padding-left: 20px;
         margin-bottom: 14px; } }
     @media (max-width: 767px) {
       .footer .contact li {
+        padding-left: 0;
         margin-bottom: 7px; } }
   .footer .contact img {
     width: 36px;
@@ -551,16 +565,26 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .footer .community li {
-      margin-right: 32px; }
+    .footer .community a {
+      display: block;
+      padding-right: 16px;
+      padding-left: 16px; }
       @media (max-width: 991px) {
-        .footer .community li {
-          margin-right: 24px; } }
-    .footer .community a:hover {
-      opacity: 0.7; }
+        .footer .community a {
+          padding-right: 12px;
+          padding-left: 12px; } }
+      .footer .community a:hover {
+        opacity: 0.7; }
     @media (max-width: 991px) {
       .footer .community img {
         width: 24px; } }
+  .footer hr {
+    margin-left: 24px;
+    margin-right: 16px; }
+    @media (max-width: 991px) {
+      .footer hr {
+        margin-left: 0;
+        margin-right: 12px; } }
   .footer .clause {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -577,9 +601,15 @@ h6 {
             -ms-flex-direction: column;
                 flex-direction: column;
         margin-top: 16px; } }
-    @media (max-width: 767px) {
-      .footer .clause p {
-        margin-bottom: 8px; } }
+    .footer .clause p {
+      padding-left: 24px; }
+      @media (max-width: 991px) {
+        .footer .clause p {
+          padding-left: 20px; } }
+      @media (max-width: 767px) {
+        .footer .clause p {
+          padding-left: 0;
+          margin-bottom: 8px; } }
     .footer .clause ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -591,10 +621,12 @@ h6 {
               -ms-flex-direction: column;
                   flex-direction: column; } }
       .footer .clause ul li {
-        margin-right: 48px; }
+        margin-right: 8px; }
+        .footer .clause ul li:nth-last-child(1) {
+          margin-right: 0; }
         @media (max-width: 991px) {
           .footer .clause ul li {
-            margin-right: 24px; } }
+            margin-right: 0; } }
         @media (max-width: 767px) {
           .footer .clause ul li {
             margin-right: 0;
@@ -602,9 +634,19 @@ h6 {
             .footer .clause ul li:nth-last-child(1) {
               margin-bottom: 0; } }
       .footer .clause ul a {
-        color: #fff; }
+        color: #fff;
+        padding-right: 16px;
+        padding-left: 16px; }
         .footer .clause ul a:hover {
           text-decoration: underline; }
+        @media (max-width: 991px) {
+          .footer .clause ul a {
+            padding-right: 12px;
+            padding-left: 12px; } }
+        @media (max-width: 767px) {
+          .footer .clause ul a {
+            padding-right: 0;
+            padding-left: 0; } }
 
 .container {
   max-width: 1140px;
