@@ -1,5 +1,5 @@
 .header {
-  padding: 30px 88px 29.43px 88px;
+  padding: 30px 56px 29.43px 88px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +8,7 @@
   height: 108px;
   @include pad {
     height: auto;
-    padding: 30px 39px;
+    padding: 30px 19px 30px 39px;
   }
   @include mobile {
     justify-content: center;
@@ -37,13 +37,6 @@
       flex-wrap: wrap;
     }
     li {
-      margin-left: 64px;
-      &:nth-child(1) {
-        margin-left: 0;
-      }
-      @include pad {
-        margin-left: 40px;
-      }
       @include mobile {
         width: 50%;
         margin-left: 0;
@@ -58,6 +51,8 @@
       display: block;
       color: #fff;
       font-size: 1.25rem;
+      padding-left: 32px;
+      padding-right: 32px;
       border-bottom: 5px solid transparent;
       &:hover {
         font-weight: 700;
@@ -66,6 +61,10 @@
           border-bottom: none;
           color: $red-700;
         }
+      }
+      @include pad {
+        padding-left: 20px;
+        padding-right: 20px;
       }
       @include mobile {
         padding: 8px 0;
@@ -82,23 +81,35 @@
   @include mobile {
     padding: 24px 0;
   }
+  .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-right: 8px;
+    @include pad {
+      max-width: 730px;
+    }
+    @include mobile {
+      max-width: 375px;
+      padding-right: 3px;
+      padding-left: 15px;
+    }
+  }
   .menu {
     display: flex;
     margin-bottom: 36px;
     @include mobile {
       display: none;
     }
-    li {
-      margin-right: 48px;
-      @include pad {
-        margin-right: 40px;
-      }
-    }
     a {
       color: $white;
-      border-bottom: 3px solid transparent;
+      padding-right: 24px;
+      padding-left: 24px;
       &:hover {
-        border-bottom: 3px solid #fff;
+        text-decoration: underline;
+      }
+      @include pad {
+        padding-right: 20px;
+        padding-left: 20px;
       }
     }
   }
@@ -107,10 +118,13 @@
       display: flex;
       align-items: center;
       margin-bottom: 16px;
+      padding-left: 24px;
       @include pad {
+        padding-left: 20px;
         margin-bottom: 14px;
       }
       @include mobile {
+        padding-left: 0;
         margin-bottom: 7px;
       }
     }
@@ -142,19 +156,30 @@
   }
   .community {
     display: flex;
-    li {
-      margin-right: 32px;
+    a {
+      display: block;
+      padding-right: 16px;
+      padding-left: 16px;
       @include pad {
-        margin-right: 24px;
+        padding-right: 12px;
+        padding-left: 12px;
       }
-    }
-    a:hover {
-      opacity: 0.7;
+      &:hover {
+        opacity: 0.7;
+      }
     }
     img {
       @include pad {
         width: 24px;
       }
+    }
+  }
+  hr {
+    margin-left: 24px;
+    margin-right: 16px;
+    @include pad {
+      margin-left: 0;
+      margin-right: 12px;
     }
   }
   .clause {
@@ -167,7 +192,12 @@
       margin-top: 16px;
     }
     p {
+      padding-left: 24px;
+      @include pad {
+        padding-left: 20px;
+      }
       @include mobile {
+        padding-left: 0;
         margin-bottom: 8px;
       }
     }
@@ -177,9 +207,12 @@
         flex-direction: column;
       }
       li {
-        margin-right: 48px;
+        margin-right: 8px;
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
         @include pad {
-          margin-right: 24px;
+          margin-right: 0;
         }
         @include mobile {
           margin-right: 0;
@@ -191,8 +224,18 @@
       }
       a {
         color: $white;
+        padding-right: 16px;
+        padding-left: 16px;
         &:hover {
           text-decoration: underline;
+        }
+        @include pad {
+          padding-right: 12px;
+          padding-left: 12px;
+        }
+        @include mobile {
+          padding-right: 0;
+          padding-left: 0;
         }
       }
     }
